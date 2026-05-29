@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
-   
+    
     <style>
         /* CSS RESET & VARIABILI DI BRANDING "FxV" */
         * {
@@ -16,12 +16,12 @@
             padding: 0;
             scroll-behavior: smooth;
         }
-       
+        
         :root {
             --primary-color: #0F172A;   /* Blu Notte Ardesia Profondo (Lusso, Autorevolezza, Scienza) */
             --secondary-color: #0D9488; /* Teal / Verde Petrolio (Salute, Longevità, Chinesiologia) */
             --accent-color: #F97316;    /* Arancione Energetico (Potenza, Performance, CTA) */
-            --bg-warm: #F8FAFC;          /* Grigio Ghiaccio Caldo (Massimo contrasto visivo) */
+            --bg-warm: #F1F5F9;         /* Grigio leggermente più scuro per accentuare lo stacco tra le sezioni */
             --text-dark: #1E293B;       /* Antracite per testi leggibili e non affaticanti */
             --text-light: #FFFFFF;
             --font-title: 'Montserrat', sans-serif;
@@ -52,7 +52,7 @@
             color: var(--primary-color);
             font-weight: 700;
         }
-       
+        
         .highlight {
             color: var(--secondary-color);
             font-weight: 700;
@@ -298,10 +298,10 @@
             letter-spacing: 0.5px;
         }
         tr:nth-child(even) {
-            background-color: #F8FAFC;
+            background-color: var(--bg-warm);
         }
         tr:hover {
-            background-color: #F1F5F9;
+            background-color: #E2E8F0; /* Aggiornato per rimanere visibile sul nuovo grigio */
         }
 
         /* METODOLOGIA OPERATIVA IN 4 STEP */
@@ -531,7 +531,7 @@
                 <h2 class="section-title">Le Nostre Due Anime Strategiche</h2>
                 <p>Un approccio unico sul territorio capace di coprire le massime esigenze dello sport di vertice e di rispondere a un'importante necessità sociale legata all'invecchiamento attivo.</p>
             </div>
-           
+            
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80');"></div>
@@ -668,7 +668,7 @@
                     <span class="section-tag" style="color: var(--accent-color);">Inizia oggi</span>
                     <h2 class="section-title">Investi sulla tua salute o sulla tua performance.</h2>
                     <p>Siamo pronti a mettere la nostra professionalità, la nostra energia e la nostra passione al servizio del tuo cambiamento. Contattaci ora per bloccare il tuo assessment iniziale con Federico e Valerio.</p>
-                   
+                    
                     <div class="contact-details">
                         <div class="contact-item">📍 Sede Centrale FxV | Riceviamo su appuntamento</div>
                         <div class="contact-item">📞 Telefono Diretto: +39 02 9876543</div>
@@ -719,4 +719,3 @@
 
 </body>
 </html>
-
