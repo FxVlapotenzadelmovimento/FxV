@@ -384,11 +384,11 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-text">
-                    <span class="section-tag">Hub della Salute e della Performance</span>
-                    <h2 class="section-title">Scienza del movimento umano e programmazione scientifica.</h2>
-                    <p><strong>FxV</strong> nasce dalla sinergia professionale di <strong>Federico e Valerio</strong>, massimi esperti nel campo della <strong>chinesiologia</strong> e della <strong>metodologia dell'allenamento</strong>.</p>
-                    <p>La nostra vision si fonda su un pilastro scientifico indiscutibile: il corpo umano, a qualsiasi età e livello di partenza, risponde agli stimoli motori personalizzati migliorando la propria <strong>funzionalità, efficienza e resilienza</strong>.</p>
-                    <p>Abbattiamo le barriere tra lo sport d'élite e la salute quotidiana. Applichiamo lo stesso rigore metodologico sia all'atleta che punta al podio, sia alla persona senior che desidera proteggere la propria <strong>libertà e indipendenza</strong>. Il movimento è la risposta.</p>
+                    <span class="section-tag">Chi Siamo</span>
+                    <h2 class="section-title">Siamo Federico e Valerio.</h2>
+                    <p><strong>FxV</strong> nasce da un lungo percorso di collaborazione e amicizia, una sintonia che rappresenta il cuore pulsante del nostro progetto.</p>
+                    <p>Crediamo che il corpo umano possa evolversi e migliorare a ogni età, a patto di essere guidato nel modo corretto: questa è la base su cui lavoriamo ogni giorno.</p>
+                    <p>Non facciamo distinzioni tra chi punta al podio e chi desidera semplicemente mantenere la propria autonomia nel tempo; a tutti offriamo lo stesso alto livello di attenzione, con proposte create su misura. Il nostro obiettivo è aiutarti a muoverti meglio, per vivere meglio.</p>
                 </div>
                 <div class="about-image">
                     <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" alt="FxV Chinesiologia e Allenamento Scientifico">
@@ -571,37 +571,15 @@
 
     <footer>
         <div class="container">
-            <p><strong>FxV S.r.l.</strong> | Hub della Salute e della Performance Atletica | P.IVA 09876543210</p>
-            <p style="font-size: 13px; opacity: 0.5; margin-top: 15px;">© 2026 FxV. Tutti i diritti riservati. I percorsi di allenamento sono supervisionati da Chinesiologi iscritti ai registri professionali.</p>
+            <p><strong>FxV S.r.l.</strong> | La Potenza del Movimento | &copy; 2026</p>
         </div>
     </footer>
 
+    <!-- SCRIPT PER MODAL -->
     <script>
-        function openModal(modalId) {
-            const modal = document.getElementById(modalId);
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden'; 
-        }
-        function closeModal(modalId) {
-            const modal = document.getElementById(modalId);
-            modal.classList.remove('active');
-            document.body.style.overflow = ''; 
-        }
-        function closeModalOutside(event, modalId) {
-            const modal = document.getElementById(modalId);
-            if (event.target === modal) {
-                closeModal(modalId);
-            }
-        }
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") {
-                const activeModals = document.querySelectorAll('.modal-overlay.active');
-                activeModals.forEach(modal => {
-                    modal.classList.remove('active');
-                    document.body.style.overflow = '';
-                });
-            }
-        });
+        function openModal(id) { document.getElementById(id).classList.add('active'); }
+        function closeModal(id) { document.getElementById(id).classList.remove('active'); }
+        function closeModalOutside(event, id) { if (event.target.id === id) closeModal(id); }
     </script>
 </body>
 </html>
