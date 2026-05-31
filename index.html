@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     
     <style>
-        /* CSS RESET & VARIABILI */
+        /* CSS RESET & VARIABILI DI BRANDING "FxV" */
         * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
         
         :root {
@@ -24,12 +24,12 @@
         }
 
         html { scroll-padding-top: 80px; }
-        body { font-family: var(--font-body); background-color: var(--bg-warm); color: var(--text-dark); line-height: 1.6; font-size: 18px; }
+        body { font-family: var(--font-body); background-color: var(--bg-warm); color: var(--text-dark); line-height: 1.6; font-size: 18px; -webkit-font-smoothing: antialiased; }
         .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
         section { padding: 100px 0; }
         strong { color: var(--primary-color); font-weight: 700; }
 
-        /* HEADER E NAVIGAZIONE OTTIMIZZATA */
+        /* STILE HEADER & NAV */
         header {
             background-color: rgba(15, 23, 42, 0.96);
             backdrop-filter: blur(10px);
@@ -40,42 +40,54 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
         .header-flex { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-family: var(--font-title); font-size: 28px; font-weight: 900; color: var(--text-light); text-decoration: none; }
+        .logo { font-family: var(--font-title); font-size: 32px; font-weight: 900; color: var(--text-light); text-decoration: none; letter-spacing: -1px; }
         .logo span { color: var(--accent-color); }
         
-        .nav-links { display: flex; align-items: center; gap: 24px; }
+        /* NAV LINKS AGGIORNATI (Senza articoli) */
+        .nav-links { display: flex; gap: 30px; }
         .nav-links a {
             color: var(--text-light);
             text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            white-space: nowrap;
+            font-weight: 500;
+            font-size: 16px;
             transition: color 0.3s;
+            text-transform: uppercase;
         }
         .nav-links a:hover { color: var(--accent-color); }
 
-        @media (max-width: 768px) {
-            .nav-links { gap: 12px; }
-            .nav-links a { font-size: 11px; }
-        }
-
-        /* HERO */
+        /* HERO SECTION */
         .hero { position: relative; height: 95vh; min-height: 650px; background: linear-gradient(rgba(15, 23, 42, 0.70), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover; display: flex; align-items: center; color: var(--text-light); text-align: center; }
         .hero-content { max-width: 900px; margin: 0 auto; }
-        .hero h1 { font-family: var(--font-title); font-size: 96px; font-weight: 900; margin-bottom: 15px; }
-        .hero p { font-size: 28px; margin-bottom: 45px; text-transform: uppercase; letter-spacing: 4px; }
-        .btn-main { display: inline-block; background-color: var(--accent-color); color: var(--text-light); padding: 20px 45px; font-weight: 700; border-radius: 50px; text-decoration: none; text-transform: uppercase; }
+        .hero h1 { font-family: var(--font-title); font-size: 96px; font-weight: 900; line-height: 1.05; margin-bottom: 15px; letter-spacing: -3px; }
+        .hero p { font-size: 28px; margin-bottom: 45px; font-weight: 600; color: rgba(255, 255, 255, 0.95); text-transform: uppercase; letter-spacing: 4px; }
+        .btn-main { display: inline-block; background-color: var(--accent-color); color: var(--text-light); text-decoration: none; padding: 20px 45px; font-size: 18px; font-weight: 700; border-radius: 50px; text-transform: uppercase; cursor: pointer; transition: 0.3s; }
+        .btn-main:hover { background-color: #ea580c; transform: translateY(-2px); }
 
-        /* CHI SIAMO - SLIDE 2 */
+        /* SEZIONI (Invariate per struttura) */
         .about { background-color: var(--text-light); }
         .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
         @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } }
         .section-tag { color: var(--secondary-color); font-weight: 700; text-transform: uppercase; font-size: 14px; letter-spacing: 2px; margin-bottom: 12px; display: block; }
         .section-title { font-family: var(--font-title); font-size: 42px; color: var(--primary-color); margin-bottom: 24px; font-weight: 800; }
         .about-text p { margin-bottom: 22px; color: #475569; font-size: 18px; }
-        .about-image img { width: 100%; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .about-image img { width: 100%; border-radius: 24px; box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06); }
+        .services { background-color: var(--bg-warm); }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
+        .service-card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03); }
+        .method { background-color: white; border-top: 1px solid #E2E8F0; }
+        .method-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 32px; margin-top: 50px; }
+        .method-step { text-align: center; padding: 30px; background-color: var(--bg-warm); border-radius: 16px; }
+        .step-number { width: 70px; height: 70px; background-color: var(--secondary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 800; margin: 0 auto 24px auto; }
+        .team { background-color: var(--bg-warm); }
+        .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
+        .team-card-small { background: white; padding: 30px; border-radius: 20px; display: flex; align-items: center; gap: 24px; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03); cursor: pointer; }
+        .modal-overlay { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(15,23,42,0.85); z-index: 9999; align-items: center; justify-content: center; }
+        .modal-overlay.active { display: flex; }
+        .modal-content { background: white; padding: 50px; max-width: 650px; width: 90%; border-radius: 24px; position: relative; max-height: 90vh; overflow-y: auto; }
+        .contact { background-color: var(--primary-color); color: white; padding: 100px 0; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .contact-form { background: white; padding: 45px; border-radius: 20px; color: var(--text-dark); }
+        footer { background-color: #090D16; color: rgba(255,255,255,0.45); padding: 45px 0; text-align: center; }
     </style>
 </head>
 <body>
@@ -109,9 +121,7 @@
                 <div class="about-text">
                     <span class="section-tag">Chi Siamo</span>
                     <h2 class="section-title">Siamo Federico e Valerio.</h2>
-                    <p>FxV nasce da un lungo percorso di collaborazione e amicizia, una sintonia che rappresenta il cuore pulsante del nostro progetto.</p>
-                    <p>Crediamo che il corpo umano possa evolversi e migliorare a ogni età, a patto di essere guidato nel modo corretto: questa è la base su cui lavoriamo ogni giorno.</p>
-                    <p>Non facciamo distinzioni tra chi punta al podio e chi desidera semplicemente mantenere la propria autonomia nel tempo; a tutti offriamo lo stesso alto livello di attenzione, con proposte create su misura. Il nostro obiettivo è aiutarti a muoverti meglio, per vivere meglio.</p>
+                    <p><strong>FxV</strong> nasce da un lungo percorso di collaborazione e amicizia, una sintonia che rappresenta il cuore pulsante del nostro progetto.</p>
                 </div>
                 <div class="about-image">
                     <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" alt="FxV Chinesiologia">
@@ -120,5 +130,10 @@
         </div>
     </section>
 
+    <script>
+        function openModal(id) { document.getElementById(id).classList.add('active'); }
+        function closeModal(id) { document.getElementById(id).classList.remove('active'); }
+        function closeModalOutside(event, id) { if (event.target.id === id) closeModal(id); }
+    </script>
 </body>
 </html>
