@@ -62,11 +62,11 @@
             font-weight: 700;
         }
 
-        /* STILE HEADER & NAV */
+        /* STILE HEADER & NAV - MODIFICATO PER COMPATTEZZA */
         header {
             background-color: rgba(15, 23, 42, 0.96);
             backdrop-filter: blur(10px);
-            padding: 20px 0;
+            padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -79,7 +79,7 @@
         }
         .logo {
             font-family: var(--font-title);
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 900;
             color: var(--text-light);
             text-decoration: none;
@@ -91,10 +91,11 @@
         .nav-links a {
             color: var(--text-light);
             text-decoration: none;
-            margin-left: 30px;
+            margin-left: 20px; /* Ridotto spazio */
             font-weight: 500;
-            font-size: 16px;
+            font-size: 14px;   /* Dimensione ridotta */
             transition: color 0.3s;
+            text-transform: uppercase;
         }
         .nav-links a:hover {
             color: var(--accent-color);
@@ -293,8 +294,6 @@
             transition: transform 0.3s ease;
             text-align: center;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            
-            /* Aggiunte per gestire scroll nei testi lunghi sui dispositivi più piccoli */
             max-height: 90vh; 
             overflow-y: auto; 
         }
@@ -334,7 +333,7 @@
             font-size: 16px;
             line-height: 1.8;
             text-align: left;
-            margin-bottom: 16px; /* Spazio tra i paragrafi */
+            margin-bottom: 16px;
         }
 
         /* CONTATTI - SLIDE 6 */
@@ -364,7 +363,7 @@
                 <a href="#chi-siamo">La Vision</a>
                 <a href="#macro-aree">I Programmi</a>
                 <a href="#metodo">Il Metodo</a>
-                <a href="#team">I Fondatori</a>
+                <a href="#chi-siamo">Chi Siamo</a>
                 <a href="#contatti">Contatti</a>
             </nav>
         </div>
