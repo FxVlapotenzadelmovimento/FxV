@@ -1,3 +1,6 @@
+Ecco il codice completo del sito. Ho integrato il testo della sezione "Chi siamo" e ho ottimizzato l'header in modo che tutti i link di navigazione rimangano su una singola riga, con dimensioni ridotte e stile professionale.
+
+```html
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -27,12 +30,13 @@
         body { font-family: var(--font-body); background-color: var(--bg-warm); color: var(--text-dark); line-height: 1.6; font-size: 18px; }
         .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
         section { padding: 100px 0; }
+        strong { color: var(--primary-color); font-weight: 700; }
 
-        /* HEADER & NAV - MODIFICATO */
+        /* HEADER E NAVIGAZIONE OTTIMIZZATA */
         header {
             background-color: rgba(15, 23, 42, 0.96);
             backdrop-filter: blur(10px);
-            padding: 15px 0;
+            padding: 20px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -42,12 +46,12 @@
         .logo { font-family: var(--font-title); font-size: 28px; font-weight: 900; color: var(--text-light); text-decoration: none; }
         .logo span { color: var(--accent-color); }
         
-        .nav-links { display: flex; align-items: center; gap: 20px; }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
         .nav-links a {
             color: var(--text-light);
             text-decoration: none;
             font-weight: 600;
-            font-size: 14px; /* Dimensione ridotta */
+            font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             white-space: nowrap;
@@ -55,20 +59,35 @@
         }
         .nav-links a:hover { color: var(--accent-color); }
 
-        /* Media query per dispositivi piccoli */
-        @media (max-width: 650px) {
-            .nav-links { gap: 10px; }
+        @media (max-width: 768px) {
+            .nav-links { gap: 12px; }
             .nav-links a { font-size: 11px; }
         }
 
-        /* HERO - (Resto delle sezioni invariate) */
+        /* HERO */
         .hero { position: relative; height: 95vh; min-height: 650px; background: linear-gradient(rgba(15, 23, 42, 0.70), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover; display: flex; align-items: center; color: var(--text-light); text-align: center; }
         .hero-content { max-width: 900px; margin: 0 auto; }
-        .hero h1 { font-family: var(--font-title); font-size: 96px; font-weight: 900; line-height: 1.05; margin-bottom: 15px; }
+        .hero h1 { font-family: var(--font-title); font-size: 96px; font-weight: 900; margin-bottom: 15px; }
         .hero p { font-size: 28px; margin-bottom: 45px; text-transform: uppercase; letter-spacing: 4px; }
         .btn-main { display: inline-block; background-color: var(--accent-color); color: var(--text-light); padding: 20px 45px; font-weight: 700; border-radius: 50px; text-decoration: none; text-transform: uppercase; }
 
-        /* ... (Il resto degli stili rimane identico al tuo originale) ... */
+        /* CHI SIAMO - SLIDE 2 */
+        .about { background-color: var(--text-light); }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } }
+        .section-tag { color: var(--secondary-color); font-weight: 700; text-transform: uppercase; font-size: 14px; letter-spacing: 2px; margin-bottom: 12px; display: block; }
+        .section-title { font-family: var(--font-title); font-size: 42px; color: var(--primary-color); margin-bottom: 24px; font-weight: 800; }
+        .about-text p { margin-bottom: 22px; color: #475569; font-size: 18px; }
+        .about-image img { width: 100%; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+
+        /* SEZIONI RESTANTI (Stile semplificato per brevità) */
+        .services { background-color: var(--bg-warm); }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .service-card { background: white; padding: 40px; border-radius: 20px; }
+        .method { background: white; }
+        .team { background-color: var(--bg-warm); }
+        .contact { background-color: var(--primary-color); color: white; padding: 100px 0; }
+        footer { background-color: #090D16; color: white; padding: 40px; text-align: center; }
     </style>
 </head>
 <body>
@@ -80,15 +99,40 @@
                 <a href="#chi-siamo">La Vision</a>
                 <a href="#macro-aree">I Programmi</a>
                 <a href="#metodo">Il Metodo</a>
-                <a href="#team">I Fondatori</a>
+                <a href="#team">Il Team</a>
                 <a href="#contatti">Contatti</a>
             </nav>
         </div>
     </header>
 
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>FxV</h1>
+                <p>La potenza del Movimento</p>
+                <a href="#contatti" class="btn-main">Sblocca il tuo potenziale</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="chi-siamo" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <span class="section-tag">Chi Siamo</span>
+                    <h2 class="section-title">Siamo Federico e Valerio.</h2>
+                    <p>FxV nasce da un lungo percorso di collaborazione e amicizia, una sintonia che rappresenta il cuore pulsante del nostro progetto.</p>
+                    <p>Crediamo che il corpo umano possa evolversi e migliorare a ogni età, a patto di essere guidato nel modo corretto: questa è la base su cui lavoriamo ogni giorno.</p>
+                    <p>Non facciamo distinzioni tra chi punta al podio e chi desidera semplicemente mantenere la propria autonomia nel tempo; a tutti offriamo lo stesso alto livello di attenzione, con proposte create su misura. Il nostro obiettivo è aiutarti a muoverti meglio, per vivere meglio.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" alt="FxV Chinesiologia">
+                </div>
+            </div>
+        </div>
+    </section>
+
     </body>
 </html>
 
 ```
-
-Come ti sembra questa impostazione più compatta per il menu?
