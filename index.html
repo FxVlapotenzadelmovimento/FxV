@@ -205,7 +205,7 @@
         .method-step h3 { font-family: var(--font-title); font-size: 20px; color: var(--primary-color); margin-bottom: 12px; font-weight: 700; }
         .method-step p { font-size: 15px; color: #475569; }
 
-        /* TEAM - SLIDE 5 (AGGIORNATA CON POPUP) */
+        /* TEAM - SLIDE 5 */
         .team {
             background-color: var(--bg-warm);
         }
@@ -293,6 +293,10 @@
             transition: transform 0.3s ease;
             text-align: center;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            
+            /* Aggiunte per gestire scroll nei testi lunghi sui dispositivi più piccoli */
+            max-height: 90vh; 
+            overflow-y: auto; 
         }
         .modal-overlay.active .modal-content {
             transform: translateY(0);
@@ -330,6 +334,7 @@
             font-size: 16px;
             line-height: 1.8;
             text-align: left;
+            margin-bottom: 16px; /* Spazio tra i paragrafi */
         }
 
         /* CONTATTI - SLIDE 6 */
@@ -376,7 +381,6 @@
     </section>
 
     <section id="chi-siamo" class="about">
-        <!-- Contenuto inalterato... -->
         <div class="container">
             <div class="about-grid">
                 <div class="about-text">
@@ -394,7 +398,6 @@
     </section>
 
     <section id="macro-aree" class="services">
-        <!-- Contenuto inalterato... -->
         <div class="container">
             <div class="services-header">
                 <span class="section-tag">Soluzioni Verticali</span>
@@ -433,7 +436,6 @@
     </section>
 
     <section id="metodo" class="method">
-        <!-- Contenuto inalterato... -->
         <div class="container">
             <div style="text-align: center; max-width: 700px; margin: 0 auto 40px auto;">
                 <span class="section-tag">Nessun Protocollo Standardizzato</span>
@@ -466,7 +468,6 @@
         </div>
     </section>
 
-    <!-- SLIDE 5 MODIFICATA: I CURRICULUM DEL TEAM (COMPATTA CON ONCLICK) -->
     <section id="team" class="team">
         <div class="container">
             <div style="text-align: center; margin-bottom: 50px;">
@@ -475,7 +476,6 @@
             </div>
 
             <div class="team-grid">
-                <!-- Card Federico -->
                 <div class="team-card-small" onclick="openModal('modal-federico')">
                     <img class="team-avatar-small" src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=300&q=80" alt="Federico - Fondatore FxV">
                     <div class="team-info-small">
@@ -485,12 +485,11 @@
                     </div>
                 </div>
 
-                <!-- Card Valerio -->
                 <div class="team-card-small" onclick="openModal('modal-valerio')">
                     <img class="team-avatar-small" src="https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&w=300&q=80" alt="Valerio - Fondatore FxV">
                     <div class="team-info-small">
-                        <h3>Valerio</h3>
-                        <p>Chinesiologo clinico esperto in Longevità Funzionale e Biomeccanica.</p>
+                        <h3>Valerio Pignalosa Conti</h3>
+                        <p>Esperto in Chinesiologia, Posturologia e Performance Sportiva.</p>
                         <span class="read-more">Leggi il Curriculum &rarr;</span>
                     </div>
                 </div>
@@ -498,16 +497,13 @@
         </div>
     </section>
 
-    <!-- POPUP / MODALI (Nascosti di default) -->
-    
-    <!-- Modal Federico -->
     <div id="modal-federico" class="modal-overlay" onclick="closeModalOutside(event, 'modal-federico')">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('modal-federico')">&times;</span>
             <img class="modal-avatar" src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=300&q=80" alt="Federico">
             <h3 class="section-title" style="margin-bottom: 5px;">Federico</h3>
             <span class="modal-role">Esperto in Metodologia e Performance d'Élite</span>
-            <p class="modal-bio">
+            <p class="modal-bio" style="margin-bottom: 0;">
                 Specialista nello Strength & Conditioning e nel condizionamento fisico ad alte prestazioni. 
                 Ha guidato la preparazione di atleti professionisti ottimizzando i macrocicli di lavoro in vista 
                 di competizioni nazionali ed europee. Porta all'interno di FxV il rigore del monitoraggio scientifico 
@@ -517,25 +513,26 @@
         </div>
     </div>
 
-    <!-- Modal Valerio -->
     <div id="modal-valerio" class="modal-overlay" onclick="closeModalOutside(event, 'modal-valerio')">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('modal-valerio')">&times;</span>
-            <img class="modal-avatar" src="https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&w=300&q=80" alt="Valerio">
-            <h3 class="section-title" style="margin-bottom: 5px;">Valerio</h3>
-            <span class="modal-role">Specialista in Chinesiologia e Longevità Funzionale</span>
-            <p class="modal-bio">
-                Chinesiologo clinico ed esperto del movimento umano applicato alla salute. 
-                Ha dedicato la sua carriera allo studio della biomeccanica del cammino e dei protocolli anti-caduta 
-                per la popolazione senior, diventando un punto di riferimento territoriale nel contrasto alla sarcopenia 
-                e nel ripristino dell'autonomia articolare quotidiana. Il suo approccio unisce l'evidenza clinica 
-                alla somministrazione adattata dell'esercizio fisico.
-            </p>
+            <img class="modal-avatar" src="https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&w=300&q=80" alt="Valerio Pignalosa Conti">
+            <h3 class="section-title" style="margin-bottom: 5px;">Valerio Pignalosa Conti</h3>
+            <span class="modal-role">Esperto in Chinesiologia, Posturologia e Performance Sportiva</span>
+            
+            <p class="modal-bio">Laureato in Scienze Motorie, Valerio integra esperienza sportiva, formazione posturale, massaggio sportivo, rieducazione funzionale e preparazione fisica. Dal 2007 lavora nel mondo della pallavolo come allenatore, occupandosi di programmazione dell’allenamento, gestione del gruppo, sviluppo delle qualità motorie e adattamento del lavoro alle esigenze degli atleti.</p>
+            
+            <p class="modal-bio">Nel corso della sua formazione ha approfondito ambiti complementari come chinesiologia, posturologia, allenamento della forza, esercizio funzionale, valutazione dell’arto inferiore, taping, coppettazione, massaggio sportivo e Strength & Conditioning. Ha inoltre completato un Master in Ortopedia e Traumatologia Sportiva, consolidando una visione più ampia del movimento umano, della prevenzione degli infortuni e dei percorsi di recupero funzionale.</p>
+            
+            <p class="modal-bio">Dal 2018 opera come massaggiatore sportivo, affiancando tecniche manuali, esercizio e valutazione funzionale per supportare il benessere fisico, il recupero e la qualità del movimento. Il suo approccio unisce osservazione del gesto, analisi posturale, lavoro manuale e programmazione dell’esercizio, con l’obiettivo di costruire percorsi progressivi, sostenibili e realmente adattati alla persona.</p>
+            
+            <p class="modal-bio">È docente presso accademie di formazione nel settore fitness e massaggio, dove insegna massaggio sportivo, ginnastica posturale, rieducazione funzionale, anatomia applicata e posturologia. Questa esperienza didattica gli permette di trasmettere concetti tecnici in modo chiaro, pratico e applicabile, formando professionisti del movimento e del benessere fisico.</p>
+            
+            <p class="modal-bio" style="margin-bottom: 0;">All’interno di FxV porta una competenza trasversale che unisce preparazione sportiva, analisi chinesiologica, educazione al movimento e protocolli di ginnastica posturale individualizzata. Il suo lavoro è orientato al miglioramento della forza, dell’equilibrio, dell’autonomia e della qualità del movimento nella vita quotidiana, con particolare attenzione alla popolazione adulta e senior, alla riduzione del rischio di infortuni e al mantenimento della funzionalità nel tempo.</p>
         </div>
     </div>
 
     <section id="contatti" class="contact">
-        <!-- Contenuto inalterato... -->
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-info">
@@ -591,7 +588,6 @@
         </div>
     </footer>
 
-    <!-- SCRIPT GESTIONE POPUP (MODAL) -->
     <script>
         // Funzione per aprire il popup
         function openModal(modalId) {
