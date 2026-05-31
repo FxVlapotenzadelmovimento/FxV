@@ -28,6 +28,10 @@
             --font-body: 'Inter', sans-serif;
         }
 
+        html {
+            scroll-padding-top: 80px; /* Compensa l'header fisso durante lo scroll */
+        }
+
         body {
             font-family: var(--font-body);
             background-color: var(--bg-warm);
@@ -96,7 +100,7 @@
             color: var(--accent-color);
         }
 
-        /* HERO SECTION (GRANDE IMMAGINE DI COPERTINA - SLIDE 1) */
+        /* HERO SECTION - SLIDE 1 */
         .hero {
             position: relative;
             height: 95vh;
@@ -153,303 +157,197 @@
             box-shadow: 0 6px 28px rgba(249, 115, 22, 0.6);
         }
 
-        /* CHI SIAMO & VISION / MISSION - SLIDE 2 */
-        .about {
-            background-color: var(--text-light);
-        }
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-        @media (max-width: 768px) {
-            .about-grid { grid-template-columns: 1fr; }
-        }
+        /* CHI SIAMO - SLIDE 2 */
+        .about { background-color: var(--text-light); }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } }
         .section-tag {
-            color: var(--secondary-color);
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 14px;
-            letter-spacing: 2px;
-            margin-bottom: 12px;
-            display: block;
+            color: var(--secondary-color); font-weight: 700; text-transform: uppercase;
+            font-size: 14px; letter-spacing: 2px; margin-bottom: 12px; display: block;
         }
         .section-title {
-            font-family: var(--font-title);
-            font-size: 42px;
-            color: var(--primary-color);
-            margin-bottom: 24px;
-            font-weight: 800;
-            line-height: 1.2;
-            letter-spacing: -1px;
+            font-family: var(--font-title); font-size: 42px; color: var(--primary-color);
+            margin-bottom: 24px; font-weight: 800; line-height: 1.2; letter-spacing: -1px;
         }
-        .about-text p {
-            margin-bottom: 22px;
-            color: #475569;
-            font-size: 18px;
-        }
-        .about-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 24px;
-            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06);
-        }
+        .about-text p { margin-bottom: 22px; color: #475569; font-size: 18px; }
+        .about-image img { width: 100%; height: auto; border-radius: 24px; box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06); }
 
-        /* MACRO-AREE E PROGRAMMI - SLIDE 3 */
-        .services {
-            background-color: var(--bg-warm);
-        }
-        .services-header {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 60px auto;
-        }
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-        }
+        /* MACRO-AREE - SLIDE 3 */
+        .services { background-color: var(--bg-warm); }
+        .services-header { text-align: center; max-width: 800px; margin: 0 auto 60px auto; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
         .service-card {
-            background-color: var(--text-light);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid rgba(15, 23, 42, 0.04);
-            display: flex;
-            flex-direction: column;
+            background-color: var(--text-light); border-radius: 20px; overflow: hidden;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03); transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(15, 23, 42, 0.04); display: flex; flex-direction: column;
         }
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
-        }
-        .service-img {
-            height: 260px;
-            background-size: cover;
-            background-position: center;
-        }
-        .service-content {
-            padding: 40px;
-            flex-grow: 1;
-        }
-        .service-content h3 {
-            font-family: var(--font-title);
-            font-size: 26px;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-            font-weight: 800;
-        }
-        .service-content p {
-            color: #475569;
-            font-size: 17px;
-            margin-bottom: 16px;
-        }
-        .service-list {
-            list-style: none;
-            margin-top: 20px;
-        }
-        .service-list li {
-            margin-bottom: 12px;
-            font-size: 16px;
-            color: #334155;
-            padding-left: 24px;
-            position: relative;
-        }
-        .service-list li::before {
-            content: "✓";
-            color: var(--secondary-color);
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08); }
+        .service-img { height: 260px; background-size: cover; background-position: center; }
+        .service-content { padding: 40px; flex-grow: 1; }
+        .service-content h3 { font-family: var(--font-title); font-size: 26px; color: var(--primary-color); margin-bottom: 20px; font-weight: 800; }
+        .service-content p { color: #475569; font-size: 17px; margin-bottom: 16px; }
+        .service-list { list-style: none; margin-top: 20px; }
+        .service-list li { margin-bottom: 12px; font-size: 16px; color: #334155; padding-left: 24px; position: relative; }
+        .service-list li::before { content: "✓"; color: var(--secondary-color); font-weight: bold; position: absolute; left: 0; }
 
-        /* METODOLOGIA OPERATIVA IN 4 STEP - SLIDE 4 */
+        /* METODO - SLIDE 4 */
         .method {
-            /* Rimossa la variabile --text-light (sfondo bianco) e inserita l'immagine webp */
-            background: url('abc.webp') no-repeat center center/cover;
-            
-            /* NOTA: Se l'immagine abc.webp rende difficile leggere il testo, usa il codice qui sotto
-               invece di quello sopra. Aggiunge un velo bianco semitrasparente (80%) sull'immagine:
-               
-               background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('abc.webp') no-repeat center center/cover;
-            */
-            
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('abc.webp') no-repeat center center/cover;
             border-top: 1px solid #E2E8F0;
         }
-        .method-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 32px;
-            margin-top: 50px;
-        }
-        .method-step {
-            text-align: center;
-            padding: 30px 20px;
-            background-color: var(--bg-warm);
-            border-radius: 16px;
-            border: 1px solid rgba(0,0,0,0.02);
-            /* Aggiunta una leggera ombra per far staccare i box dall'immagine di sfondo */
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05); 
-        }
+        .method-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 32px; margin-top: 50px; }
+        .method-step { text-align: center; padding: 30px 20px; background-color: var(--bg-warm); border-radius: 16px; border: 1px solid rgba(0,0,0,0.02); box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
         .step-number {
-            width: 70px;
-            height: 70px;
-            background-color: var(--secondary-color);
-            color: var(--text-light);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            font-weight: 800;
-            font-family: var(--font-title);
-            margin: 0 auto 24px auto;
-            box-shadow: 0 4px 14px rgba(13, 148, 136, 0.3);
+            width: 70px; height: 70px; background-color: var(--secondary-color); color: var(--text-light);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px;
+            font-weight: 800; font-family: var(--font-title); margin: 0 auto 24px auto; box-shadow: 0 4px 14px rgba(13, 148, 136, 0.3);
         }
-        .method-step h3 {
-            font-family: var(--font-title);
-            font-size: 20px;
-            color: var(--primary-color);
-            margin-bottom: 12px;
-            font-weight: 700;
-        }
-        .method-step p {
-            font-size: 15px;
-            color: #475569;
-        }
+        .method-step h3 { font-family: var(--font-title); font-size: 20px; color: var(--primary-color); margin-bottom: 12px; font-weight: 700; }
+        .method-step p { font-size: 15px; color: #475569; }
 
-        /* I CURRICULUM DEL TEAM - SLIDE 5 */
+        /* TEAM - SLIDE 5 (AGGIORNATA CON POPUP) */
         .team {
             background-color: var(--bg-warm);
         }
         .team-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 48px;
+            gap: 40px;
             margin-top: 40px;
         }
         @media (max-width: 768px) {
             .team-grid { grid-template-columns: 1fr; }
         }
-        .team-card {
+        .team-card-small {
             background-color: var(--text-light);
-            border-radius: 24px;
-            padding: 45px;
+            border-radius: 20px;
+            padding: 30px;
             display: flex;
-            gap: 32px;
-            align-items: flex-start;
-            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02);
+            align-items: center;
+            gap: 24px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03);
             border: 1px solid rgba(15, 23, 42, 0.04);
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .team-card-small:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.1);
         }
         @media (max-width: 550px) {
-            .team-card { flex-direction: column; align-items: center; text-align: center; }
+            .team-card-small { flex-direction: column; text-align: center; }
         }
-        .team-avatar {
-            width: 130px;
-            height: 130px;
+        .team-avatar-small {
+            width: 90px;
+            height: 90px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid var(--secondary-color);
+            border: 3px solid var(--secondary-color);
             flex-shrink: 0;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
         }
-        .team-info h3 {
+        .team-info-small h3 {
             font-family: var(--font-title);
-            font-size: 26px;
+            font-size: 22px;
             color: var(--primary-color);
             margin-bottom: 4px;
             font-weight: 800;
         }
-        .team-role {
+        .team-info-small p {
+            color: #475569;
+            font-size: 15px;
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+        .read-more {
+            font-size: 14px;
+            color: var(--accent-color);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* MODAL / POPUP CSS */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(5px);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+        .modal-content {
+            background-color: var(--text-light);
+            border-radius: 24px;
+            padding: 50px;
+            max-width: 650px;
+            width: 90%;
+            position: relative;
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+            text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        .modal-overlay.active .modal-content {
+            transform: translateY(0);
+        }
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 32px;
+            color: #94A3B8;
+            cursor: pointer;
+            transition: color 0.2s;
+            line-height: 1;
+        }
+        .close-modal:hover { color: var(--accent-color); }
+        .modal-avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        .modal-role {
             color: var(--secondary-color);
             font-weight: 700;
             font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            margin-bottom: 18px;
             display: block;
+            margin-bottom: 20px;
         }
-        .team-bio {
+        .modal-bio {
             color: #475569;
             font-size: 16px;
-            line-height: 1.7;
+            line-height: 1.8;
+            text-align: left;
         }
 
-        /* SEZIONE CONTATTI & MODULO DI CONVERSIONE - SLIDE 6 */
-        .contact {
-            background-color: var(--primary-color);
-            color: var(--text-light);
-        }
-        .contact .section-title {
-            color: var(--text-light);
-        }
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-        @media (max-width: 768px) {
-            .contact-grid { grid-template-columns: 1fr; gap: 50px; }
-        }
-        .contact-info p {
-            font-size: 19px;
-            margin-bottom: 28px;
-            color: rgba(255, 255, 255, 0.85);
-        }
-        .contact-details {
-            margin-top: 40px;
-        }
-        .contact-item {
-            margin-bottom: 20px;
-            font-size: 17px;
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            color: rgba(255, 255, 255, 0.9);
-        }
-        .contact-form {
-            background-color: var(--text-light);
-            padding: 45px;
-            border-radius: 20px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-        }
-        .form-group {
-            margin-bottom: 22px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: var(--primary-color);
-            font-size: 15px;
-        }
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            padding: 15px;
-            border: 2px solid #E2E8F0;
-            border-radius: 8px;
-            font-size: 16px;
-            color: var(--text-dark);
-            font-family: var(--font-body);
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-            outline: none;
-            border-color: var(--secondary-color);
-            box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.15);
-        }
+        /* CONTATTI - SLIDE 6 */
+        .contact { background-color: var(--primary-color); color: var(--text-light); }
+        .contact .section-title { color: var(--text-light); }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; gap: 50px; } }
+        .contact-info p { font-size: 19px; margin-bottom: 28px; color: rgba(255, 255, 255, 0.85); }
+        .contact-details { margin-top: 40px; }
+        .contact-item { margin-bottom: 20px; font-size: 17px; display: flex; align-items: center; gap: 14px; color: rgba(255, 255, 255, 0.9); }
+        .contact-form { background-color: var(--text-light); padding: 45px; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.25); }
+        .form-group { margin-bottom: 22px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--primary-color); font-size: 15px; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 15px; border: 2px solid #E2E8F0; border-radius: 8px; font-size: 16px; color: var(--text-dark); font-family: var(--font-body); transition: border-color 0.3s, box-shadow 0.3s; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--secondary-color); box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.15); }
 
-        /* FOOTER BRANDIZZATO */
-        footer {
-            background-color: #090D16;
-            color: rgba(255,255,255,0.45);
-            padding: 45px 0;
-            font-size: 15px;
-            text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.05);
-        }
+        /* FOOTER */
+        footer { background-color: #090D16; color: rgba(255,255,255,0.45); padding: 45px 0; font-size: 15px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
     </style>
 </head>
 <body>
@@ -478,6 +376,7 @@
     </section>
 
     <section id="chi-siamo" class="about">
+        <!-- Contenuto inalterato... -->
         <div class="container">
             <div class="about-grid">
                 <div class="about-text">
@@ -495,6 +394,7 @@
     </section>
 
     <section id="macro-aree" class="services">
+        <!-- Contenuto inalterato... -->
         <div class="container">
             <div class="services-header">
                 <span class="section-tag">Soluzioni Verticali</span>
@@ -533,6 +433,7 @@
     </section>
 
     <section id="metodo" class="method">
+        <!-- Contenuto inalterato... -->
         <div class="container">
             <div style="text-align: center; max-width: 700px; margin: 0 auto 40px auto;">
                 <span class="section-tag">Nessun Protocollo Standardizzato</span>
@@ -565,6 +466,7 @@
         </div>
     </section>
 
+    <!-- SLIDE 5 MODIFICATA: I CURRICULUM DEL TEAM (COMPATTA CON ONCLICK) -->
     <section id="team" class="team">
         <div class="container">
             <div style="text-align: center; margin-bottom: 50px;">
@@ -573,28 +475,67 @@
             </div>
 
             <div class="team-grid">
-                <div class="team-card">
-                    <img class="team-avatar" src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=300&q=80" alt="Federico - Fondatore FxV">
-                    <div class="team-info">
+                <!-- Card Federico -->
+                <div class="team-card-small" onclick="openModal('modal-federico')">
+                    <img class="team-avatar-small" src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=300&q=80" alt="Federico - Fondatore FxV">
+                    <div class="team-info-small">
                         <h3>Federico</h3>
-                        <span class="team-role">Esperto in Metodologia e Performance d'Élite</span>
-                        <p class="team-bio">Specialista nello Strength & Conditioning e nel condizionamento fisico ad alte prestazioni. Ha guidato la preparazione di atleti professionisti ottimizzando i macrocicli di lavoro in vista di competizioni nazionali ed europee. Porta all'interno di FxV il rigore del monitoraggio scientifico dei carichi e lo sviluppo delle qualità biomotorie represse.</p>
+                        <p>Specialista in Metodologia dell'Allenamento e Performance d'Élite.</p>
+                        <span class="read-more">Leggi il Curriculum &rarr;</span>
                     </div>
                 </div>
 
-                <div class="team-card">
-                    <img class="team-avatar" src="https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&w=300&q=80" alt="Valerio - Fondatore FxV">
-                    <div class="team-info">
+                <!-- Card Valerio -->
+                <div class="team-card-small" onclick="openModal('modal-valerio')">
+                    <img class="team-avatar-small" src="https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&w=300&q=80" alt="Valerio - Fondatore FxV">
+                    <div class="team-info-small">
                         <h3>Valerio</h3>
-                        <span class="team-role">Specialista in Chinesiologia e Longevità Funzionale</span>
-                        <p class="team-bio">Chinesiologo clinico ed esperto del movimento umano applicato alla salute. Ha dedicato la sua carriera allo studio della biomeccanica del cammino e dei protocolli anti-caduta per la popolazione senior, diventando un punto di riferimento territoriale nel contrasto alla sarcopenia e nel ripristino dell'autonomia articolare quotidiana.</p>
+                        <p>Chinesiologo clinico esperto in Longevità Funzionale e Biomeccanica.</p>
+                        <span class="read-more">Leggi il Curriculum &rarr;</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- POPUP / MODALI (Nascosti di default) -->
+    
+    <!-- Modal Federico -->
+    <div id="modal-federico" class="modal-overlay" onclick="closeModalOutside(event, 'modal-federico')">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-federico')">&times;</span>
+            <img class="modal-avatar" src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=300&q=80" alt="Federico">
+            <h3 class="section-title" style="margin-bottom: 5px;">Federico</h3>
+            <span class="modal-role">Esperto in Metodologia e Performance d'Élite</span>
+            <p class="modal-bio">
+                Specialista nello Strength & Conditioning e nel condizionamento fisico ad alte prestazioni. 
+                Ha guidato la preparazione di atleti professionisti ottimizzando i macrocicli di lavoro in vista 
+                di competizioni nazionali ed europee. Porta all'interno di FxV il rigore del monitoraggio scientifico 
+                dei carichi e lo sviluppo delle qualità biomotorie represse, garantendo metodologie di allenamento 
+                strutturate sul modello prestativo di atleti di vertice.
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal Valerio -->
+    <div id="modal-valerio" class="modal-overlay" onclick="closeModalOutside(event, 'modal-valerio')">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-valerio')">&times;</span>
+            <img class="modal-avatar" src="https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&w=300&q=80" alt="Valerio">
+            <h3 class="section-title" style="margin-bottom: 5px;">Valerio</h3>
+            <span class="modal-role">Specialista in Chinesiologia e Longevità Funzionale</span>
+            <p class="modal-bio">
+                Chinesiologo clinico ed esperto del movimento umano applicato alla salute. 
+                Ha dedicato la sua carriera allo studio della biomeccanica del cammino e dei protocolli anti-caduta 
+                per la popolazione senior, diventando un punto di riferimento territoriale nel contrasto alla sarcopenia 
+                e nel ripristino dell'autonomia articolare quotidiana. Il suo approccio unisce l'evidenza clinica 
+                alla somministrazione adattata dell'esercizio fisico.
+            </p>
+        </div>
+    </div>
+
     <section id="contatti" class="contact">
+        <!-- Contenuto inalterato... -->
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-info">
@@ -650,5 +591,42 @@
         </div>
     </footer>
 
+    <!-- SCRIPT GESTIONE POPUP (MODAL) -->
+    <script>
+        // Funzione per aprire il popup
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.add('active');
+            // Blocca lo scroll della pagina in background
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        // Funzione per chiudere il popup tramite la 'X'
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('active');
+            // Riattiva lo scroll
+            document.body.style.overflow = ''; 
+        }
+
+        // Funzione per chiudere il popup cliccando fuori dalla card
+        function closeModalOutside(event, modalId) {
+            const modal = document.getElementById(modalId);
+            if (event.target === modal) {
+                closeModal(modalId);
+            }
+        }
+
+        // Aggiunge la chiusura del popup anche premendo il tasto ESC sulla tastiera
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                const activeModals = document.querySelectorAll('.modal-overlay.active');
+                activeModals.forEach(modal => {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            }
+        });
+    </script>
 </body>
 </html>
