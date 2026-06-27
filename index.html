@@ -8,23 +8,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
 <style>
-/* CSS RESET & VARIABILI DI BRANDING */
 * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
 :root {
-    --primary-color: #0F172A;
-    --secondary-color: #0D9488;
-    --accent-color: #F97316;
-    --bg-warm: #F1F5F9;
-    --text-dark: #1E293B;
-    --text-light: #FFFFFF;
-    --font-title: 'Montserrat', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --primary-color: #0F172A; --secondary-color: #0D9488; --accent-color: #F97316;
+    --bg-warm: #F1F5F9; --text-dark: #1E293B; --text-light: #FFFFFF;
+    --font-title: 'Montserrat', sans-serif; --font-body: 'Inter', sans-serif;
 }
-html { scroll-padding-top: 80px; }
-body { font-family: var(--font-body); background-color: var(--bg-warm); color: var(--text-dark); line-height: 1.6; font-size: 18px; }
+body { font-family: var(--font-body); background-color: var(--bg-warm); color: var(--text-dark); line-height: 1.6; }
 .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+section { padding: 100px 0; }
 
-/* HEADER COMPATTO */
+/* HEADER */
 header { background-color: rgba(15, 23, 42, 0.96); backdrop-filter: blur(10px); padding: 15px 0; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
 .header-flex { display: flex; justify-content: space-between; align-items: center; }
 .logo { font-family: var(--font-title); font-size: 28px; font-weight: 900; color: var(--text-light); text-decoration: none; }
@@ -32,12 +26,21 @@ header { background-color: rgba(15, 23, 42, 0.96); backdrop-filter: blur(10px); 
 .nav-links a { color: var(--text-light); text-decoration: none; margin-left: 20px; font-weight: 500; font-size: 14px; text-transform: uppercase; }
 .nav-links a:hover { color: var(--accent-color); }
 
-/* SLIDE 3 (MACRO-AREE) */
-.services { padding: 100px 0; background-color: var(--bg-warm); }
-.services-header { text-align: center; max-width: 800px; margin: 0 auto 60px auto; }
+/* HERO */
+.hero { height: 95vh; background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1920&q=80') center/cover; display: flex; align-items: center; color: var(--text-light); text-align: center; }
+.hero h1 { font-family: var(--font-title); font-size: 96px; font-weight: 900; }
+.btn-main { display: inline-block; background-color: var(--accent-color); color: var(--text-light); padding: 20px 45px; border-radius: 50px; text-transform: uppercase; font-weight: 700; text-decoration: none; margin-top: 20px; }
+
+/* SEZIONI */
 .section-title { font-family: var(--font-title); font-size: 42px; color: var(--primary-color); margin-bottom: 24px; font-weight: 800; }
+.services { background-color: var(--bg-warm); }
+.services-header { text-align: center; max-width: 800px; margin: 0 auto 60px auto; }
 .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
 .service-card { background-color: #fff; border-radius: 20px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+.about { background-color: var(--text-light); }
+.method { background-color: var(--bg-warm); }
+.contact { background-color: var(--primary-color); color: var(--text-light); }
+footer { background-color: #090D16; color: rgba(255,255,255,0.45); padding: 45px 0; text-align: center; }
 </style>
 </head>
 <body>
@@ -46,32 +49,69 @@ header { background-color: rgba(15, 23, 42, 0.96); backdrop-filter: blur(10px); 
     <div class="container header-flex">
         <a href="#" class="logo">FxV<span>.</span></a>
         <nav class="nav-links">
-            <a href="#vision">Vision</a>
-            <a href="#programmi">Programmi</a>
+            <a href="#chi-siamo">Vision</a>
+            <a href="#macro-aree">Programmi</a>
             <a href="#metodo">Metodo</a>
-            <a href="#chi-siamo">Chi Siamo</a>
+            <a href="#team">Chi Siamo</a>
             <a href="#contatti">Contatti</a>
         </nav>
     </div>
 </header>
 
-<section id="programmi" class="services">
+<section class="hero">
+    <div class="container"><div class="hero-content"><h1>FxV</h1><p>La potenza del Movimento</p><a href="#contatti" class="btn-main">Sblocca il tuo potenziale</a></div></div>
+</section>
+
+<section id="chi-siamo" class="about">
+    <div class="container">
+        <h2>Chi Siamo</h2>
+        <p>Siamo Federico e Valerio. FxV nasce da un percorso di collaborazione e amicizia...</p>
+    </div>
+</section>
+
+<section id="macro-aree" class="services">
     <div class="container">
         <div class="services-header">
             <h2 class="section-title">Le Nostre Due Anime Strategiche</h2>
+            <p>Un approccio capace di soddisfare le esigenze performative tipiche dello sport agonistico e di rispondere a una necessità sociale, sempre più urgente e attuale, legata all'invecchiamento attivo.</p>
         </div>
         <div class="services-grid">
             <div class="service-card">
                 <h3>Area Performance Agonistica</h3>
-                <p>Percorsi di condizionamento fisico d'élite per atleti che mirano al massimo potenziale.</p>
+                <p>Dedicata agli atleti che praticano sport agonistici e pretendono di massimizzare il proprio potenziale.</p>
             </div>
             <div class="service-card">
                 <h3>Area Salute & Longevità</h3>
-                <p>Protocolli specifici per restituire autonomia motoria e sicurezza nella terza età.</p>
+                <p>Il programma specifico per la terza età. Restituiamo autonomia motoria quotidiana e massima sicurezza.</p>
             </div>
         </div>
     </div>
 </section>
+
+<section id="metodo" class="method">
+    <div class="container">
+        <h2>Il Metodo</h2>
+        <p>Il nostro approccio rigoroso in 4 step per garantire risultati oggettivi.</p>
+    </div>
+</section>
+
+<section id="team" class="about">
+    <div class="container">
+        <h2>I Fondatori</h2>
+        <p>Federico e Valerio, esperti in Scienze Motorie e Performance.</p>
+    </div>
+</section>
+
+<section id="contatti" class="contact">
+    <div class="container">
+        <h2>Contatti</h2>
+        <p>Siamo pronti per il tuo cambiamento.</p>
+    </div>
+</section>
+
+<footer>
+    <div class="container"><p>FxV S.r.l. | La Potenza del Movimento | &copy; 2026</p></div>
+</footer>
 
 </body>
 </html>
