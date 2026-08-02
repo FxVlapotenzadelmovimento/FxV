@@ -165,7 +165,8 @@ font-family: var(--font-title); font-size: 42px; color: var(--primary-color);
 margin-bottom: 24px; font-weight: 800; line-height: 1.2; letter-spacing: -1px;
 }
 .about-text p { margin-bottom: 22px; color: #475569; font-size: 18px; }
-.about-image img { width: 100%; height: auto; border-radius: 24px; box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06); }
+.about-image { display: flex; justify-content: center; align-items: center; }
+.about-image img { width: 100%; max-width: 450px; height: auto; } /* Ottimizzato per SVG senza bordi o ombre */
 
 /* MACRO-AREE - SLIDE 3 */
 .services { background-color: var(--bg-warm); }
@@ -383,8 +384,8 @@ footer { background-color: #090D16; color: rgba(255,255,255,0.45); padding: 45px
 <p>Non facciamo distinzioni tra chi punta al podio e chi desidera semplicemente mantenere la propria autonomia nel tempo; a tutti offriamo lo stesso alto livello di attenzione, con proposte create su misura. Il nostro obiettivo è aiutarti a muoverti meglio, per vivere meglio.</p>
 </div>
 <div class="about-image">
-<!-- QUI È DOVE HO INSERITO IL TUO LOGO -->
-<img src="logo-FxV.webp" alt="Logo FxV">
+<!-- Inserimento corretto del file SVG per il logo FxV -->
+<img src="logo-FxV.svg" alt="Logo FxV">
 </div>
 </div>
 </div>
@@ -419,7 +420,7 @@ footer { background-color: #090D16; color: rgba(255,255,255,0.45); padding: 45px
 <ul class="service-list">
 <li><strong>Prevenzione cadute:</strong> Protocolli che stimolino l'equilibrio, i livelli di forza degli arti inferiori e aspetti coordinativi generali per gestire con successo situazioni di disequilibrio.</li>
 <li><strong>Mantenimento dell'autonomia:</strong> Esercizi funzionali che permettano all'utente di svolgere in autonomia, sicurezza e sempre con minore sforzo, gesti che fanno parte della propria quotidianità.</li>
-<li><strong>Efficienza fisica generale:</strong> Protocolli di routine con elementsi di coordinazione generale, mobilità articolare, rinforzo degli arti e del core, stimolazione del metabolismo aerobico.</li>
+<li><strong>Efficienza fisica generale:</strong> Protocolli di routine con elementi di coordinazione generale, mobilità articolare, rinforzo degli arti e del core, stimolazione del metabolismo aerobico.</li>
 </ul>
 </div>
 </div>
