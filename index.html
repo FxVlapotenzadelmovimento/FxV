@@ -546,6 +546,13 @@ footer { background-color: #090D16; color: rgba(255,255,255,0.45); padding: 45px
 <label for="messaggio">Descrivi brevemente la tua situazione o i tuoi obiettivi</label>
 <textarea id="messaggio" rows="4" placeholder="Es. Sono un atleta agonista di tennis e vorrei.../ Sono una signora di 76 anni e il medico ha riconosciuto dei fattori di rischio di caduta..." required></textarea>
 </div>
+<!-- Checkbox obbligatoria per la Privacy Policy -->
+<div class="form-group" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 25px;">
+<input type="checkbox" id="privacy-check" required style="width: auto; margin-top: 5px; cursor: pointer;">
+<label for="privacy-check" style="font-weight: normal; font-size: 14px; color: #475569; line-height: 1.4; cursor: pointer;">
+Ho letto e accetto l'<a href="privacy.html" target="_blank" style="color: var(--secondary-color); text-decoration: underline;">Informativa sulla Privacy</a> e acconsento al trattamento dei dati per essere ricontattato.
+</label>
+</div>
 <button type="submit" class="btn-main" style="width: 100%; border-radius: 8px;">Richiedi Consulenza Dedicata</button>
 </form>
 </div>
@@ -556,6 +563,10 @@ footer { background-color: #090D16; color: rgba(255,255,255,0.45); padding: 45px
 <footer>
 <div class="container">
 <p><strong>FxV</strong> | La Potenza del Movimento | 2026</p>
+<div style="margin-top: 15px; font-size: 14px;">
+<a href="privacy.html" style="color: rgba(255,255,255,0.6); text-decoration: none; margin-right: 15px; transition: color 0.2s;">Privacy Policy</a> | 
+<a href="cookie.html" style="color: rgba(255,255,255,0.6); text-decoration: none; margin-left: 15px; transition: color 0.2s;">Cookie Policy</a>
+</div>
 </div>
 </footer>
 
